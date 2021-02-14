@@ -6,7 +6,7 @@ const AWS=require('aws-sdk');
 const { response } = require('express');
 const axios= require('axios');
 const secret_config = require('../../../config/secret');
-//const jwtMiddleware = require('../../../config/jwtMiddleware');
+//cont jwtMiddleware = require('../../../config/jwtMiddleware');
 const jwt = require('jsonwebtoken');
 
 const DLDao = require('../dao/DLDao');
@@ -126,10 +126,7 @@ exports.newPoohInfo = async function (req, res) {
         logger.error(`App - DL Query error\n: ${err.message}`);
         return res.status(500).send(`Error: ${err.message}`);
     }    
-    // }catch(err){
-    //     console.log(err);
-    //     response(res,500,"서버 에러");
-    // }
+    
 
 };
 

@@ -146,9 +146,6 @@ exports.DsignUp = async function (req, res) {
     try {
         try {
            
-
-            // TRANSACTION : advanced
-           // await connection.beginTransaction(); // START TRANSACTION
             const hashedPassword = await crypto.createHash('sha512').update(password).digest('hex');
             const insertDoctorUserInfoParams = [id, hashedPassword, name, hospital_name, address, phone_number, hospital_number, photo_url,marketing];
             const insertDoctorUserRows = await userDao.insertDoctorUserInfo(insertDoctorUserInfoParams);
@@ -239,8 +236,7 @@ exports.GsignUp = async function (req, res) {
         try {
             
 
-            // TRANSACTION : advanced
-           // await connection.beginTransaction(); // START TRANSACTION
+           
             const hashedPassword = await crypto.createHash('sha512').update(password).digest('hex');
             const insertGuardianUserInfoParams = [id, hashedPassword, guardian_name, relationship, real_guardian, phone_number, recognition_path,marketing];
             
@@ -276,8 +272,7 @@ exports.GsignUp = async function (req, res) {
 //     try {
 //         try {
 
-//             // TRANSACTION : advanced
-//            // await connection.beginTransaction(); // START TRANSACTION
+
 //            // const hashedPassword = await crypto.createHash('sha512').update(password).digest('hex');
 //             const insertBabyInfoParams = [g_id, baby_name, weight, address, birth, gender, using_hospital];
             
