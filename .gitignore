@@ -1,5 +1,5 @@
 /config/database.js
 /config/secret.js
 
-/src/web
-/src/webAdmin
+/src/web/
+/src/webAdmin/
